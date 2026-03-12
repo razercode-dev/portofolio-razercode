@@ -40,7 +40,7 @@
                 I'm <span></span>
             </h3>
             <p>I'm a student for SMK studying in Computer and Network Engineering (TKJ) I'm passionate about web development and troubleshooting, especially build a mini projects and debug journey i've building a carrier for my learning map.</p>
-        
+            
             <div class="social-icons"> 
                 <a href="https://github.com/razercode-dev"><i class="bx bxl-github"></i></a>
                 <a href="https://www.instagram.com/rz.coding/"><i class="bx bxl-instagram-alt"></i></a>
@@ -51,17 +51,17 @@
         </div>
 
        
-        <div class="home-img">
+        <div class="home-img reveal">
             <img src="assets/img/IMG_4515.JPG" alt="">
         </div>
     </section>
 
     <section class="about" id="about">
-        <div class="about-img">
+        <div class="about-img reveal">
             <img src="assets/img/IMG_4515.JPG" alt="">
         </div>
 
-        <div class="about-content">
+        <div class="about-content reveal">
             <h2 class="heading">About <span>Me</span>
             </h2>
         
@@ -75,12 +75,14 @@
         <a href="#project" class="btn">Read Me</a>
 
         </div>
+
+ 
     </section>
 
     <section class="services" id="services">
         <h2 class="heading">Services</h2>
 
-        <div class="services-container">
+        <div class="services-container reveal">
         
             <div class="services-box">
                 <i class='bx bx-code-block' ></i>
@@ -106,59 +108,317 @@
         </div>
     </section>
 
-    <section class="project" id="project">
+    <section class="project reveal" id="project">
         <h2 class="heading">Projects</h2>
 
-        <div class="projects-container">
-            <div class="projects-box">
-                <img src="assets/img/1.png" alt="">
-                <div class="projects-info">
-                    <h4>Tic Tac Toe Games</h4>
-                    <p>A dark simple tic tac toe games.</p>
-                    <a href="https://tic-tac-toe-games-five.vercel.app/"><i class='bx bx-link-external' ></i></a>
-                </div>
-            </div>
+      <div class="project-search">
+    <input type="text" id="searchProject" placeholder="Search project...">
+</div>
 
-             <div class="projects-box">
-                <img src="assets/img/2.png" alt="">
-                <div class="projects-info">
-                    <h4>Dynamic Calendar</h4>
-                    <p>A dynamic calendar sync with current month year and day.</p>
-                    <a href="https://dynamic-calendar-zeta.vercel.app/"><i class='bx bx-link-external' ></i></a>
-                </div>
+           <div class="project-filter">
+    <button data-filter="all" class="active">All</button>
+    <button data-filter="game">Game</button>
+    <button data-filter="ui">UI</button>
+    <button data-filter="app">App</button>
+</div>
+
+
+        <div class="projects-container">
+
+ 
+    <!-- Project 1 -->
+    <div class="projects-box game">
+        <img src="assets/img/1.png" class=="preview-img" alt="Tic Tac Toe Game">
+        <div class="projects-info">
+            <h4>Tic Tac Toe Game</h4>
+            <p>A simple tic tac toe web game built with HTML, CSS and JavaScript.</p>
+
+  
+            <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+    </div>
+
+            <div class="project-links">
+                <a href="https://tic-tac-toe-games-five.vercel.app/" target="_blank">Live Demo</a>
+                <a href="https://github.com/razercode-dev/TicTacToe-Games" target="_blank">GitHub</a>
             </div>
-             <div class="projects-box">
-                <img src="assets/img/3.png" alt="">
-                <div class="projects-info">
-                    <h4>Age Calculator</h4>
-                    <p>A simmple calulate app for age.</p>
-                    <a href="https://age-calculator-one-lyart.vercel.app/"><i class='bx bx-link-external' ></i></a>
-                </div>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="projects-box app">
+        <img src="assets/img/2.png" alt="Dynamic Calendar">
+        <div class="projects-info">
+            <h4>Dynamic Calendar</h4>
+            <p>A dynamic calendar that syncs with the current date using JavaScript.</p>
+   
+            <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+    </div>
+
+            <div class="project-links">
+                <a href="https://dynamic-calendar-zeta.vercel.app/" target="_blank">Live Demo</a>
+                <a href="https://github.com/razercode-dev/dynamic-calendar" target="_blank">GitHub</a>
             </div>
-             <div class="projects-box">
-                <img src="assets/img/4.png" alt="">
-                <div class="projects-info">
-                    <h4>Rock Paper Scissors Games</h4>
-                    <p>A simple interactive games with CPU.</p>
-                    <a href="https://rock-paper-scissors-two-sigma.vercel.app/"><i class='bx bx-link-external' ></i></a>
-                </div>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="projects-box app">
+        <img src="assets/img/3.png" alt="Age Calculator">
+        <div class="projects-info">
+            <h4>Age Calculator</h4>
+            <p>A simple web app to calculate age based on birth date.</p>
+   
+            <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+    </div>
+            <div class="project-links">
+                <a href="https://age-calculator-one-lyart.vercel.app/" target="_blank">Live Demo</a>
+                <a href="https://github.com/razercode-dev/age-calculator" target="_blank">GitHub</a>
             </div>
-             <div class="projects-box">
-                <img src="assets/img/5.png" alt="">
-                <div class="projects-info">
-                    <h4>Hacker Login Form</h4>
-                    <p>A dark block grid hacker theme login.</p>
-                    <a href="https://hacker-style-login-form.vercel.app/"><i class='bx bx-link-external' ></i></a>
-                </div>
+        </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="projects-box game">
+        <img src="assets/img/4.png" alt="Rock Paper Scissors">
+        <div class="projects-info">
+            <h4>Rock Paper Scissors</h4>
+            <p>An interactive rock paper scissors game against the computer.</p>
+
+            
+            
+            <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+    </div>
+            <div class="project-links">
+                <a href="https://rock-paper-scissors-two-sigma.vercel.app/" target="_blank">Live Demo</a>
+                <a href="https://github.com/razercode-dev/rock-paper-scissors" target="_blank">GitHub</a>
             </div>
-             <div class="projects-box">
-                <img src="assets/img/6.png" alt="">
-                <div class="projects-info">
-                    <h4>PIN Lock</h4>
-                    <p>A android style lock type .</p>
-                    <a href="https://pin-lock-android-style.vercel.app/"><i class='bx bx-link-external' ></i></a>
-                </div>
+        </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="projects-box ui">
+        <img src="assets/img/5.png" alt="Hacker Login Form">
+        <div class="projects-info">
+            <h4>Hacker Login Form</h4>
+            <p>A hacker style login UI built using HTML and CSS.</p>
+
+               
+            <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+    </div>
+
+            <div class="project-links">
+                <a href="https://hacker-style-login-form.vercel.app/" target="_blank">Live Demo</a>
+                <a href="https://github.com/razercode-dev/hacker-style-login-form" target="_blank">GitHub</a>
             </div>
+        </div>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="projects-box ui">
+        <img src="assets/img/6.png" alt="PIN Lock">
+        <div class="projects-info">
+            <h4>Android PIN Lock</h4>
+            <p>An Android style PIN lock interface using JavaScript.</p>
+
+             
+            <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+    </div>
+
+            <div class="project-links">
+                <a href="https://pin-lock-android-style.vercel.app/" target="_blank">Live Demo</a>
+                <a href="https://github.com/razercode-dev/pin-lock-android-style" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 7 -->
+    <div class="projects-box ui">
+        <img src="assets/img/7.png" alt="jQuery Image Slider">
+        <div class="projects-info">
+            <h4>jQuery Image Slider</h4>
+            <p>A smooth responsive image slider built with jQuery.</p>
+
+            
+            <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+    </div>
+
+            <div class="project-links">
+                <a href="https://image-slider-jquery.vercel.app/" target="_blank">Live Demo</a>
+                <a href="https://github.com/razercode-dev/image-slider-jquery" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects-box ui">
+        <img src="assets/img/8.png" alt="Card Hover Effect">
+        <div class="projects-info">
+            <h4>Card Hover Effect</h4>
+            <p>A smooth hover effect card and responsive.</p>
+
+            
+            <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+    </div>
+
+            <div class="project-links">
+                <a href="https://banjarmasin-card-hover.vercel.app/" target="_blank">Live Demo</a>
+                <a href="https://github.com/razercode-dev/Card-Hover-Effect" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+<div class="projects-box app">
+        <img src="assets/img/9.png" alt="Text to Speech Converter">
+        <div class="projects-info">
+            <h4>Text to Speech Converter</h4>
+            <p>A tools for convert text to speech.</p>
+
+               
+            <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+    </div>
+
+            <div class="project-links">
+                <a href="https://texttospeech-converter.vercel.app/" target="_blank">Live Demo</a>
+                <a href="https://github.com/razercode-dev/texttospeech-converter" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects-box">
+        <img src="assets/img/10.png" alt="Modern Calculator">
+        <div class="projects-info">
+            <h4>Modern Calculator</h4>
+            <p>A simple calculator app with Javascript.</p>
+
+               
+            <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+    </div>
+
+            <div class="project-links">
+                <a href="https://modern-calculator-roan.vercel.app/" target="_blank">Live Demo</a>
+                <a href="https://github.com/razercode-dev/modern-calculator" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects-box">
+        <img src="assets/img/11.png" alt="QR Code Generator">
+        <div class="projects-info">
+            <h4>QR Code Generator</h4>
+            <p>A simple web tools for creating a QR Code with Javascript and API.</p>
+
+               
+            <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+    </div>
+
+            <div class="project-links">
+                <a href="https://qr-code-generator-rho-wheat-vercel.app/" target="_blank">Live Demo</a>
+                <a href="https://github.com/razercode-dev/QRCode-Generator" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects-box">
+        <img src="assets/img/12.png" alt="Simple To-DO List App">
+        <div class="projects-info">
+            <h4>Simple To-DO LIst App</h4>
+            <p>A simple To-Do List app with Local Storage.</p>
+
+               
+            <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+    </div>
+
+            <div class="project-links">
+                <a href="https://simple-to-do-list-app-eight.vercel.app/" target="_blank">Live Demo</a>
+                <a href="https://github.com/razercode-dev/simple-To-Do-List-app" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects-box">
+        <img src="assets/img/13.png" alt="Simple To-DO List App">
+        <div class="projects-info">
+            <h4>Clock UI</h4>
+            <p>A responsive clock ui with toggle theme.</p>
+
+               
+            <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+    </div>
+
+            <div class="project-links">
+                <a href="https://clock-ui-responsive.vercel.app/" target="_blank">Live Demo</a>
+                <a href="https://github.com/razercode-dev/clock-ui-responsive" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects-box">
+        <img src="assets/img/12.png" alt="Simple To-DO List App">
+        <div class="projects-info">
+            <h4>Video Slider Background Responsive</h4>
+            <p>A smooth transition background video website landing page.</p>
+
+               
+            <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+    </div>
+
+            <div class="project-links">
+                <a href="https://simple-to-do-list-app-eight.vercel.app/" target="_blank">Live Demo</a>
+                <a href="https://github.com/razercode-dev/simple-To-Do-List-app" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="project-preview" id="projectPreview">
+
+<button class="close-preview" id="closePreview">
+<i class='bx bx-x'></i>
+</button>
+
+<img id="previewImage" src="" alt="Project Preview">
+
+</div>
+</div>
         </div>
     </section>
 
