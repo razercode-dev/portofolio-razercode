@@ -39,30 +39,33 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px; /* Keep height consistent */
-    padding: 0 9%; /* Remove vertical padding (top/bottom) to fit content */
-    background: rgba(0, 0, 0, 0.499);
-    backdrop-filter: blur(10px);
+    height: 75px;
+    padding: 0 9%;
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(25, 25, 25, 0.92) 100%);
+    backdrop-filter: blur(12px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    transition: top 0.3s;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional: subtle border */
+    transition: all 0.4s ease;
+    border-bottom: 2px solid rgba(127, 132, 135, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
-    font-size: 2.5rem; /* Reduced from 3rem to fit height */
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
     color: var(--text-color);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    transition: 0.3s ease;
-    line-height: 1; /* Prevents vertical stretching */
+    transition: all 0.4s ease;
+    line-height: 1;
+    letter-spacing: 0.5px;
 }
 
 .logo:hover {
-    transform: scale(1.1);
+    transform: scale(1.08);
+    text-shadow: 0 0 15px var(--main-color);
 }
 
 .navbar {
@@ -71,49 +74,56 @@ body {
 }
 
 .navbar a {
-    font-size: 1.6rem; /* Slightly smaller for better fit */
-    color: white;
-    margin-left: 3rem;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    color: rgba(255, 255, 255, 0.85);
+    margin-left: 3.5rem;
     font-weight: 500;
-    transition: 0.3s ease;
+    transition: all 0.4s ease;
     border-bottom: 3px solid transparent;
     text-decoration: none;
-    padding: 5px 0; /* Add padding for easier clicking */
+    padding: 8px 0;
+    position: relative;
 }
 
 .navbar a:hover,
 .navbar a.active {
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
-    text-shadow: 0 0 25px var(--main-color),
-                0 0 50px var(--main-color);
+    text-shadow: 0 0 10px var(--main-color), 0 0 20px rgba(127, 132, 135, 0.5);
 }
 
 #menu-icon {
-    font-size: 3rem; /* Reduced slightly */
+    font-size: clamp(2rem, 3vw, 2.5rem);
     color: var(--main-color);
-    display: none; /* Hidden on desktop */
+    display: none;
     cursor: pointer;
     z-index: 1001;
+    transition: all 0.3s ease;
 }
 section{
-    min-height: 100vh;
-    padding: 10rem 9% 10rem;
+    min-height: auto;
+    padding: 6rem 9% 6rem;
     scroll-snap-align:start;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .home{
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 75px);
     display:flex;
     align-items:center;
-    justify-content:center;
-    gap:8rem;
+    justify-content:space-between;
+    gap:4rem;
     margin: 0;
-    padding: 0 9%;
+    padding: 4rem 9%;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .home-content h3 {
-    font-size: 3.2rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: 700;
     color: var(--text-color);
     animation: slideInLeft 0.8s ease;
@@ -128,12 +138,12 @@ span{
                 0 0 100px var(--main-color);
 }
 .home-content h3:nth-of-type(2){
-    margin-bottom: 2rem;
-    font-size: 5rem;
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 6vw, 4rem);
 }
 
 .home-content h1 {
-    font-size: 8rem;
+    font-size: clamp(3rem, 8vw, 5.5rem);
     font-weight: 700;
     line-height: 1.3;
     margin-bottom: 1rem;
@@ -150,7 +160,7 @@ span{
 
 .home-img img {
     position: relative;
-    width: 22vw;
+    width: clamp(12rem, 22vw, 30rem);
     height: auto;
     border-radius: 50%;
     cursor: pointer;
@@ -168,12 +178,12 @@ span{
 }
 
 .home-content p {
-    font-size: 1.8rem;
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
     font-weight: 500;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
     max-width: 50rem;
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     animation: fadeIn 1.2s ease;
 }
 
@@ -181,14 +191,14 @@ span{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     background: rgba(127, 132, 135, 0.1);
     border: 0.3rem solid var(--main-color);
-    font-size: 2em;
+    font-size: 1.5em;
     border-radius: 50%;
     color: var(--main-color);
-    margin: 3rem 1.5rem 3rem 0;
+    margin: 2rem 1rem 2rem 0;
     transition: all 0.4s ease;
     text-decoration: none;
     position: relative;
@@ -240,9 +250,9 @@ span{
 }
 
 .text-animation{
-    font-size: 34px;
+    font-size: clamp(1.2rem, 3vw, 2.2rem);
     font-weight: 600;
-    min-width: 280px;
+    min-width: auto;
 }
 
 .text-animation span {
@@ -360,7 +370,7 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
+    gap: 6rem;
     background: linear-gradient(135deg, var(--bg-color) 0%, var(--second-bg-color) 50%, var(--bg-color) 100%);
     min-height: 100vh;
     position: relative;
@@ -375,7 +385,7 @@ span{
 
 .about-img img {
     position: relative;
-    width: 22vw;
+    width: clamp(12rem, 20vw, 28rem);
     border-radius: 50%;
     cursor: pointer;
     border: 4px solid var(--main-color);
@@ -391,7 +401,7 @@ span{
 }
 
 .heading{
-    font-size: 8rem;
+    font-size: 4rem;
     text-align: center;
     background: linear-gradient(135deg, var(--text-color) 0%, var(--main-color) 50%, var(--text-color) 100%);
     -webkit-background-clip: text;
@@ -402,8 +412,8 @@ span{
 
 .about-content{
     background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
-    padding: 40px;
-    border-radius: 20px;
+    padding: 25px;
+    border-radius: 15px;
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     max-width: 60rem;
@@ -413,17 +423,17 @@ span{
 .about-content h2 {
     text-align: left;
     line-height: 1.5;
-    font-size: 2.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
     font-weight: 700;
 }
 
 .about-content h3 {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
 }
 .about-content p {
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
+    font-size: 1.2rem;
+    margin: 1.5rem 0 2rem;
     line-height: 1.8;
     color: rgba(255, 255, 255, 0.9);
 }
@@ -456,8 +466,16 @@ span{
     transform:translateY(0);
 }
 
+.services {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .services h2 {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .services-container {
@@ -466,14 +484,16 @@ span{
     gap: 2.5rem;
     justify-content: center;
     align-items: stretch;
+    max-width: 1300px;
+    width: 100%;
 }
 
 .services-container .services-box {
-    flex: 1 1 25rem;
-    min-width: 25rem;
+    flex: 1 1 20rem;
+    min-width: 20rem;
     background: linear-gradient(135deg, rgba(25, 25, 25, 0.8) 0%, rgba(40, 40, 40, 0.6) 100%);
-    padding: 3.5rem 2.5rem 4.5rem;
-    border-radius: 20px;
+    padding: 2.5rem 2rem 3rem;
+    border-radius: 15px;
     text-align: center;
     border: 1px solid rgba(127, 132, 135, 0.3);
     cursor: pointer;
@@ -509,8 +529,8 @@ span{
 
 .services-box i {
     color: var(--main-color);
-    font-size: 7rem;
-    margin-bottom: 1.5rem;
+    font-size: 4rem;
+    margin-bottom: 1rem;
     position: relative;
     z-index: 1;
     transition: all 0.4s ease;
@@ -522,16 +542,16 @@ span{
 }
 
 .services-box h3{
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     position: relative;
     z-index: 1;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .services-box p {
-    font-size: 1.6rem;
-    margin: 1.5rem 0 2.5rem;
+    font-size: 1.2rem;
+    margin: 1rem 0 1.5rem;
     position: relative;
     z-index: 1;
     line-height: 1.6;
@@ -558,10 +578,11 @@ span{
 
 .project h2 {
     margin-bottom: 7rem;
+    font-size: 2.5rem;
 }
 .projects-container{
-    display:grid;
-    grid-template-columns:repeat(4, 1fr);
+    display: grid;
+    grid-template-columns:repeat(3,2fr);
     gap:20px;
 }
 
@@ -622,23 +643,24 @@ span{
 
 
 .skills h2 {
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
 }
 
 .skills {
     background: var(--bg-color);
     margin: 0 auto;
+    min-height: 100vh;
 }
 
 .skill-bars {
-    max-width: 80rem;
+    max-width: 70rem;
     margin: 0 auto;
-    padding: 40px;
+    padding: 25px;
     background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
-    border-radius: 20px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
-    gap: 3.5rem;
+    gap: 2.5rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
 }
@@ -658,7 +680,7 @@ span{
 .skill-bars .bar .info span {
     color: white;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0.5px;
 }
 
@@ -745,10 +767,11 @@ span{
 
 .contact {
     background: var(--second-bg-color);
+    min-height: 100vh;
 }
 
 .contact h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .contact form {
@@ -766,46 +789,46 @@ span{
 .contact form .input-box input,
 .contact form textarea {
     width: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
+    padding: 1rem;
+    font-size: 1.4rem;
     color: var(--text-color);
     background: var(--bg-color);
     border-radius: 0.8rem;
-    margin: 1rem 0;
+    margin: 0.8rem 0;
     resize: none;
     border: none;
     outline: none;
 }
 
 .contact .btn {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    padding: 40px 0;
+    padding: 25px 0;
     background-color: var(--bg-color);
 }
 
 .footer .social {
     text-align: center;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
     color: white;
 }
 
 .footer .social a {
-    font-size: 25px;
+    font-size: 16px;
     color: white;
     border: 2px solid white;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
     display: inline-block;
     text-align: center;
     border-radius: 50%;
-    margin: 0 10px;
+    margin: 0 6px;
     transition: 0.3s ease;
 }
 
@@ -816,7 +839,7 @@ span{
 .footer ul {
     margin-top: 0;
     padding: 0;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 1.6;
     margin-bottom: 0;
     text-align: center;
@@ -835,13 +858,13 @@ span{
 
 .footer ul li {
     display: inline-block;
-    padding: 0 15px;
+    padding: 0 8px;
 }
 
 .footer .copyright {
-    margin-top: 50px;
+    margin-top: 20px;
     text-align: center;
-    font-size: 16px;
+    font-size: 12px;
     color: white;
 }
 
@@ -1050,24 +1073,29 @@ span{
 
 .project-links{
     display:flex;
-    gap:10px;
+    gap:12px;
     margin-top:15px;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
 .project-links a{
-    padding:6px 14px;
-    background:white;
+    padding:8px 16px;
+    background:linear-gradient(135deg, var(--main-color), #8a8f92);
     color:black;
-    border-radius:6px;
+    border-radius:8px;
     text-decoration:none;
-    font-size:1.3rem;
+    font-size:clamp(0.9rem, 1.5vw, 1.1rem);
     font-weight:600;
-    transition:0.3s;
+    transition:all 0.3s ease;
+    border:2px solid transparent;
 }
 
 .project-links a:hover{
     background:var(--main-color);
     color:black;
+    transform:scale(1.08);
+    box-shadow:0 0 15px var(--main-color);
 }
 
 .project-search{
@@ -1098,20 +1126,21 @@ body{
 
 .tech-stack {
     display: flex;
-    gap: 8px;
+    gap: 10px;
     flex-wrap: wrap;
-    margin-top: 15px;
-    justify-content: center; /* Center the tags */
+    margin-top: 12px;
+    justify-content: center;
 }
 
 .tech-stack span {
-    font-size: 12px;
-    padding: 4px 10px;
+    font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+    padding: 6px 12px;
     border-radius: 20px;
     background: var(--main-color);
     color: black;
     font-weight: 600;
-    white-space: nowrap; /* Prevents text from breaking inside the tag */
+    white-space: nowrap;
+    transition: all 0.3s ease;
 }
 
 
