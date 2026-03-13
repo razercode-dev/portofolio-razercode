@@ -265,7 +265,7 @@ span{
     justify-content: center;
     align-items: center;
     gap: 10rem;
-    background: var(--bg-color);
+    background: var(--second-bg-color);
 }
 
 .about-img {
