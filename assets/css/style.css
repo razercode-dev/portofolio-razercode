@@ -231,22 +231,22 @@ span{
 
 .btn {
     display: inline-block;
-    padding: 1rem 2.8rem;
-    background: var(--main-color);
-    border-radius: 4rem;
-    font-size: 1.6rem;
+    padding: 1rem 3rem;
+    background: linear-gradient(135deg, var(--main-color), #8a8f92);
+    border-radius: 50px;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
     color: black;
     text-decoration: none;
     border: 2px solid transparent;
     letter-spacing: 0.1rem;
     font-weight: 600;
-    transition: 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
 }
 
 .btn:hover {
     box-shadow: 0 0 25px var(--main-color);
-    transform: scale(1.05);
+    transform: scale(1.06) translateY(-2px);
 }
 
 .text-animation{
@@ -389,8 +389,8 @@ span{
     border-radius: 50%;
     cursor: pointer;
     border: 4px solid var(--main-color);
-    box-shadow: 0 0 16px var(--main-color), 0 0 40px rgba(127, 132, 135, 0.2);
-    transition: all 0.5s ease;
+    box-shadow: 0 0 20px var(--main-color), 0 0 50px rgba(127, 132, 135, 0.25);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about-img img:hover {
@@ -401,7 +401,7 @@ span{
 }
 
 .heading{
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     text-align: center;
     background: linear-gradient(135deg, var(--text-color) 0%, var(--main-color) 50%, var(--text-color) 100%);
     -webkit-background-clip: text;
@@ -411,20 +411,21 @@ span{
 }
 
 .about-content{
-    background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
-    padding: 25px;
-    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0.04) 100%);
+    padding: 35px;
+    border-radius: 18px;
     backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    max-width: 60rem;
+    border: 2px solid rgba(127, 132, 135, 0.25);
+    max-width: 65rem;
     animation: slideInRight 1s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .about-content h2 {
     text-align: left;
     line-height: 1.5;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: clamp(1.8rem, 3vw, 2.3rem);
+    margin-bottom: 1.2rem;
     font-weight: 700;
 }
 
@@ -432,8 +433,8 @@ span{
     font-size: 1.8rem;
 }
 .about-content p {
-    font-size: 1.2rem;
-    margin: 1.5rem 0 2rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    margin: 1.5rem 0 1.8rem;
     line-height: 1.8;
     color: rgba(255, 255, 255, 0.9);
 }
@@ -475,35 +476,38 @@ span{
 }
 
 .services h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
 .services-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2.5rem;
+    gap: 2.8rem;
     justify-content: center;
     align-items: stretch;
-    max-width: 1300px;
+    max-width: 1400px;
     width: 100%;
+    padding: 0 2rem;
 }
 
 .services-container .services-box {
     flex: 1 1 20rem;
-    min-width: 20rem;
-    background: linear-gradient(135deg, rgba(25, 25, 25, 0.8) 0%, rgba(40, 40, 40, 0.6) 100%);
-    padding: 2.5rem 2rem 3rem;
-    border-radius: 15px;
+    min-width: 18rem;
+    background: linear-gradient(135deg, rgba(25, 25, 25, 0.9) 0%, rgba(40, 40, 40, 0.7) 100%);
+    padding: 3rem 2.5rem;
+    border-radius: 18px;
     text-align: center;
-    border: 1px solid rgba(127, 132, 135, 0.3);
+    border: 2px solid rgba(127, 132, 135, 0.3);
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .services-container .services-box::before {
@@ -521,41 +525,41 @@ span{
 
 .services-container .services-box:hover {
     border-color: var(--main-color);
-    transform: translateY(-15px) scale(1.05);
-    background: linear-gradient(135deg, rgba(20, 20, 20, 0.9) 0%, rgba(35, 35, 35, 0.8) 100%);
-    box-shadow: 0 15px 40px rgba(127, 132, 135, 0.4),
-                0 0 30px rgba(127, 132, 135, 0.2);
+    transform: translateY(-12px) scale(1.04);
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(35, 35, 35, 0.9) 100%);
+    box-shadow: 0 20px 50px rgba(127, 132, 135, 0.5), 0 0 30px var(--main-color);
 }
 
 .services-box i {
     color: var(--main-color);
-    font-size: 4rem;
-    margin-bottom: 1rem;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    margin-bottom: 1.5rem;
     position: relative;
     z-index: 1;
-    transition: all 0.4s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .services-box:hover i {
-    transform: scale(1.2) rotate(10deg);
-    filter: drop-shadow(0 0 15px var(--main-color));
+    transform: scale(1.25) rotate(12deg);
+    filter: drop-shadow(0 0 20px var(--main-color));
 }
 
 .services-box h3{
-    font-size: 1.8rem;
+    font-size: clamp(1.4rem, 3vw, 2rem);
     position: relative;
     z-index: 1;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    color: var(--text-color);
 }
 
 .services-box p {
-    font-size: 1.2rem;
-    margin: 1rem 0 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin: 0.5rem 0 1.5rem;
     position: relative;
     z-index: 1;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 ::-webkit-scrollbar {
@@ -643,7 +647,8 @@ span{
 
 
 .skills h2 {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.5rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
 .skills {
@@ -653,16 +658,17 @@ span{
 }
 
 .skill-bars {
-    max-width: 70rem;
+    max-width: 80rem;
     margin: 0 auto;
-    padding: 25px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
-    border-radius: 15px;
+    padding: 35px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    gap: 2.8rem;
+    border: 2px solid rgba(127, 132, 135, 0.25);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .skill-bars .bar {
@@ -706,14 +712,14 @@ span{
     border-radius: 15px;
     background: #191919;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bar .progress-line.html span{
     width: 70%;
     background: linear-gradient(90deg, orangered, #ff6347);
     box-shadow: 0 0 25px orangered, inset 0 1px 2px rgba(255,255,255,0.2);
-    transition: all 0.5s ease;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bar .progress-line.html span:hover {
@@ -727,7 +733,7 @@ span{
     width: 82.0%;
     background: linear-gradient(90deg, #0040ff, #007bff);
     box-shadow: 0 0 25px #0040ff, inset 0 1px 2px rgba(255,255,255,0.2);
-    transition: all 0.5s ease;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bar .progress-line.css span:hover {
@@ -741,7 +747,7 @@ span{
     width: 60%;
     background: linear-gradient(90deg, orange, #ffa500);
     box-shadow: 0 0 25px orange, inset 0 1px 2px rgba(255,255,255,0.2);
-    transition: all 0.5s ease;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bar .progress-line.javascript span:hover {
@@ -755,7 +761,7 @@ span{
     width: 70%;
     background: linear-gradient(90deg, #00bbff, #00d9ff);
     box-shadow: 0 0 25px #00bbff, inset 0 1px 2px rgba(255,255,255,0.2);
-    transition: all 0.5s ease;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bar .progress-line.computernetwork span:hover {
@@ -771,14 +777,16 @@ span{
 }
 
 .contact h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
 .contact form {
-    max-width: 70rem;
-    margin: 1rem auto;
+    max-width: 75rem;
+    margin: 0 auto;
     text-align: center;
     margin-bottom: 3rem;
+    padding: 0 2rem;
 }
 .contact form .input-box {
     display: flex;
@@ -789,19 +797,35 @@ span{
 .contact form .input-box input,
 .contact form textarea {
     width: 100%;
-    padding: 1rem;
-    font-size: 1.4rem;
+    padding: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.3rem);
     color: var(--text-color);
-    background: var(--bg-color);
-    border-radius: 0.8rem;
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.9) 0%, rgba(25, 25, 25, 0.8) 100%);
+    border: 2px solid rgba(127, 132, 135, 0.3);
+    border-radius: 12px;
     margin: 0.8rem 0;
     resize: none;
-    border: none;
     outline: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact form .input-box input:focus,
+.contact form textarea:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 20px rgba(127, 132, 135, 0.3);
+    transform: translateY(-2px);
 }
 
 .contact .btn {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
+    padding: 1.2rem 3.5rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact .btn:hover {
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 0 0 30px var(--main-color);
 }
 
 .footer {
