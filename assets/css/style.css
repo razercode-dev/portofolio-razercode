@@ -87,7 +87,7 @@ section{
 }
 
 .home-content h3 {
-    font-size: 2.2rem;
+    font-size: 3.2rem;
     font-weight: 700;
     margin-top: 2rem;
 }
@@ -219,7 +219,7 @@ span{
     }
     41%,
     60%{
-        content: 'Code Enthusiast';
+        content: 'Tech';
     }
     61%,
     80%{
@@ -373,72 +373,78 @@ span{
     width: 50px;
 }
 
-.projects {
+.project {
     background: var(--second-bg-color);
 }
 
-.projects h2 {
-    margin-bottom: 5rem;
+.project h2 {
+    margin-bottom: 4rem;
 }
+
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
-    gap: 2.5rem;
+    gap: 3rem;
 }
 
+/* project card */
 .projects-container .projects-box {
     position: relative;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
-    display: flex;
-
 }
 
+/* image */
 .projects-box img {
     width: 100%;
-    transition: 0.5s ease;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
 .projects-box:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
+/* overlay */
 .projects-box .projects-info{
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     text-align: center;
-    padding: 0 4rem;
-    cursor: pointer;
-    transition: 0.5s ease;
-    backdrop-filter: blur(8px);
+    padding: 2rem;
+
+    backdrop-filter: blur(6px);
+    background: rgba(0,0,0,0.5);
+
+    transition: 0.4s ease;
 }
 
-.projects-box .projects-info:hover {
-    background: radial-gradient(rgba(0, 0, 0, 0.5)), var(--main-color);
-    transform: scale(1.1);
-}
-
+/* title */
 .projects-info h4 {
-    font-size: 3rem;
+    font-size: 1.8rem;
     color: white;
-    font-weight: 800;
+    font-weight: 700;
 }
 
+/* description */
 .projects-info p {
-    font-size: 1.6rem;
-    margin: 0.3rem 0 1rem;
-    font-weight: 600;
-
+    font-size: 1.3rem;
+    margin: 0.4rem 0 1rem;
+    font-weight: 400;
+    color: #ddd;
 }
+
 
 .projects-info a {
     color: white;
@@ -747,6 +753,62 @@ span{
     }
 }
 
+@media (max-width:768px){
+
+    section{
+        padding:8rem 5% 5rem;
+    }
+
+    .heading{
+        font-size:4rem;
+    }
+
+    .home-content h1{
+        font-size:4.2rem;
+    }
+
+    .home-content h3{
+        font-size:2rem;
+    }
+
+    .home-content p{
+        font-size:1.5rem;
+    }
+
+    .services-box{
+        padding:2rem;
+    }
+
+    .projects-info h4{
+        font-size:1.6rem;
+    }
+
+    .projects-info p{
+        font-size:1.2rem;
+    }
+
+    .skill-bars{
+        padding:20px;
+    }
+
+    .navbar{
+    text-align:center;
+}
+
+.navbar a{
+    margin:1.5rem 0;
+}
+
+
+
+}
+
+@media (max-width:600px){
+.projects-box img{
+    height:180px;
+}
+}
+
 @keyframes slideDown {
     from {opacity: 1; transform: translateY(-10px); }
     to {opacity: 1; transform: translateY(0); }
@@ -785,53 +847,34 @@ span{
 .project-filter button:hover {
     background: var(--main-color);
 }
-
 .project-links {
     display: flex;
-    gap: 12px;
-    margin-top: 15px;
+    gap: 8px;
+    margin-top: 10px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .project-links a {
-    padding: 8px 16px;
+    padding: 6px 12px;
     background: var(--main-color);
     color: black;
-    border-radius: 8px;
+    border-radius: 6px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 1.2rem;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
 }
 
 .project-links a:hover {
-    background: var(--main-color);
-    color: black;
-    transform: scale(1.08);
-    box-shadow: 0 0 15px var(--main-color);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px var(--main-color);
 }
-
-.tech-stack {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 12px;
-    justify-content: center;
+/* hover effect */
+.tech-stack span:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px var(--main-color);
 }
-
-.tech-stack span {
-    font-size: 12px;
-    padding: 6px 12px;
-    border-radius: 20px;
-    background: var(--main-color);
-    color: black;
-    font-weight: 600;
-    white-space: nowrap;
-    transition: all 0.3s ease;
-}
-
 .project-filter button.active{
     background:var(--main-color);
     color:black;
